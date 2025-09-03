@@ -1,14 +1,17 @@
 // app/page.tsx
 "use client";
 
-import { Particles } from "@/app/components/Particles";
+import {Particles} from "@/app/components/Particles";
+import ElegantNavbar from "@/app/components/ElegantNavbar";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen bg-[#FAF3E0]">  
+      <ElegantNavbar />
+
       {/* Versi 2 - Paper Texture */}
       <section
-        className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden"
+        className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden pt-20"
         style={{
           backgroundColor: "#FAF3E0", // cream paper
           backgroundImage:
@@ -19,7 +22,7 @@ export default function Home() {
         <Particles
           className="absolute inset-0 z-0"
           quantity={60}   // jumlah titik
-          size={1}        // besar partikel
+          size={0}        // besar partikel
           ease={60}       // respons gerakan
           staticity={60}  // seberapa jauh partikel bereaksi
           color="#555555" // warna partikel (abu-abu tinta halus)
